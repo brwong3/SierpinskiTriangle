@@ -10,11 +10,24 @@ public void draw()
   background(0);
   frameRate(5);
   sierpinski(len - 20,600, len);
+ 
 }
-public void mousePressed()//optional
-{
-  len = len * 2;
+
+
+void keyPressed() {
+  if (key == CODED) {
+    if (keyCode == UP) {
+       len *= 2;
+    }
+    if(keyCode == DOWN) {
+       len /= 2; 
+    }
+ 
+  }
 }
+
+
+
 public void sierpinski(int x, int y, int len) 
 {
   if(len <= 20) {
